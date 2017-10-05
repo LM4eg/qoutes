@@ -63,7 +63,7 @@
         }
 
 
-        //Регистрация юзера
+        //TODO: Регистрация юзера
         function register($link, $id, $username, $password){
 
         }
@@ -86,7 +86,7 @@
                         echo "Не ок";
                     }
         }
-        //Сброс пароля
+        //TODO: Сброс пароля
         function resetpass($link, $id, $username, $password){
 
         }
@@ -128,13 +128,15 @@
         }
 
         quote_get($link, $_GET['id']);
+
+        //Добавление цитаты В БД
         function quote_add($link, $post, $added, $rate)
         {
             //Убираем пробелы
             $post = trim($post);
             $post = htmlentities($post);
 
-//Проверяем цитату на пустоту
+        //Проверяем цитату на пустоту
             if ($post == '')
                 return false;
 
@@ -153,10 +155,10 @@
             return true;
         }
 
-        //Редактирование поста, пока не доделано
+        //TODO: Редактирование поста
         function quote_edit($link, $id, $quote, $added, $rate)
         {
-//Подготовка
+        //Подготовка
             $title = trim($title);
             $content = trim($content);
             $added = trim($date);
